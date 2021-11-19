@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Catalog from "../../features/catalog/Catalog";
 import { Product } from "../models/product";
@@ -19,15 +20,15 @@ function App() {
         price: (prevState.length * 100) + 100,
         brand: 'some brand',
         description: 'some desc',
-        pictureUrl: 'http://pic'
+        pictureUrl: '/images/products/clinique-remover.jpeg'
       }])
   }
 
   return (
-    <div>
-      <h1>One Store</h1>
+    <>
+      <Typography variant='h1'>One Store</Typography>
       <Catalog products={products} addProduct={addProduct}/>
-    </div>
+    </>
   )
 }
 
